@@ -1,0 +1,10 @@
+<h2>Todos</h2>
+<br />
+<hr />
+<ul>
+  <li *ngFor="let todo of todoService.todos$ | async">
+    <h4>{{ todo.task }}</h4>
+  </li>
+</ul>
+<!-- <button (click)="log()">CLICK</button> -->
+<router-outlet></router-outlet>

@@ -1,0 +1,15 @@
+nav {
+  height: 60px;
+  background-color: #24252a;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+}
