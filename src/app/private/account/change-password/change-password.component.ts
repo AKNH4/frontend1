@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ContentChild, ElementRef, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/core/services/user.service';
 
 @Component({
@@ -10,14 +11,20 @@ import { UserService } from 'src/app/core/services/user.service';
 export class ChangePasswordComponent implements OnInit {
   form: FormGroup;
 
-  constructor(private userService: UserService, private fb: FormBuilder) {
+  constructor(
+    private userService: UserService,
+    private fb: FormBuilder,
+    private router: Router
+  ) {
     this.form = this.fb.group({
-      password: ['', [Validators.required, Validators.minLength(6)], []],
+      password: ['', [Validators.required, Validators.minLength(4)], []],
     });
   }
   changePassword() {
     this.userService.changePassword(this.form.value.password).subscribe({
-      next: () => {},
+      next: () => {
+        setTimeout(() => this.router.navigate(['account']), 2000);
+      },
     });
     this.form.reset();
   }

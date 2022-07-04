@@ -9,9 +9,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/material/material.module';
 import { UserSidebarComponent } from './user-sidebar/user-sidebar.component';
 import { UserSidebarLinkComponent } from './user-sidebar-link/user-sidebar-link.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
-  declarations: [AccountComponent, ChangePasswordComponent, UserSidebarComponent, UserSidebarLinkComponent],
+  declarations: [AccountComponent, ChangePasswordComponent, UserSidebarComponent, UserSidebarLinkComponent, UserDetailsComponent],
   imports: [
     CommonModule,
     AccountRoutingModule,

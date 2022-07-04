@@ -24,14 +24,16 @@ export class TokenInterceptor implements HttpInterceptor {
           'Bearer ' + localStorage.getItem('token')
         ),
       });
-      return next.handle(clonedReq).pipe(
-        catchError((error) => {
-          if (error.status === 401) {
-            this.authService.logout();
-          }
-          return throwError(() => new Error(''));
-        })
-      );
+      return next
+        .handle(clonedReq)
+        .pipe
+        // catchError((error) => {
+        //   if (error.status === 401) {
+        //     this.authService.logout();
+        //   }
+        //   return throwError(() => new Error(''));
+        // })
+        ();
     }
     return next.handle(request);
   }

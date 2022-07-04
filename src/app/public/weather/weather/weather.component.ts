@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { shareReplay } from 'rxjs';
 import { Weather } from '../weather.interface';
 import { WeatherService } from '../weather.service';
 
@@ -11,11 +12,14 @@ export class WeatherComponent implements OnInit {
   constructor(private weatherService: WeatherService) {}
   weather!: Weather;
   loadData() {
-    this.weatherService.loadWeather().subscribe({
-      next: (weather: Weather) => {
-        this.weather = weather;
-      },
-    });
+    this.weatherService
+      .loadWeather()
+      // .pipe(shareReplay())
+      .subscribe({
+        next: (weather: Weather) => {
+          this.weather = weather;
+        },
+      });
   }
 
   ngOnInit(): void {

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, shareReplay } from 'rxjs';
 import { API_URL } from 'src/app/core/http/api_url.token';
 import { Weather } from './weather.interface';
 
@@ -11,6 +11,6 @@ export class WeatherService {
   constructor(private http: HttpClient, @Inject(API_URL) private url: string) {}
 
   loadWeather(): Observable<Weather> {
-    return this.http.get<Weather>(`${this.url}/weather`);
+    return this.http.get<Weather>(`${this.url}/weather`).pipe(shareReplay());
   }
 }

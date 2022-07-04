@@ -14,8 +14,7 @@ export class AuthService {
   constructor(
     private http: HttpClient,
     @Inject(API_URL) private url: string,
-    private jwtHelper: JwtHelperService,
-    private userService: UserService
+    private jwtHelper: JwtHelperService
   ) {}
 
   login(username: string, password: string): Observable<LoginRes> {
