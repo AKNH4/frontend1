@@ -1,0 +1,6 @@
+<app-container>
+  <div *ngIf="userService.currentUser$ | async as user" class="details">
+    <h4>{{ user.username | titlecase }}</h4>
+    <h4>{{ user.registeredAt | date }}</h4>
+  </div>
+</app-container>
