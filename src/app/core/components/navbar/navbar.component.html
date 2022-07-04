@@ -1,0 +1,14 @@
+<nav>
+  <h3 routerLink="">ANGULAR</h3>
+  <div class="left">
+    <ul>
+      <app-nav-link url="/todo">Todos</app-nav-link>
+      <app-nav-link url="/todo/create">Todo erstellen</app-nav-link>
+      <app-nav-link url="/weather">Wetter</app-nav-link>
+    </ul>
+    <app-nav-profile *ngIf="authService.isLoggedIn()">
+      <app-nav-link url="/logout">Logout</app-nav-link>
+      <app-nav-link url="/account">Einstellungen</app-nav-link>
+    </app-nav-profile>
+  </div>
+</nav>

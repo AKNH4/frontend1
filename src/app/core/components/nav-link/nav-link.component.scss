@@ -1,0 +1,16 @@
+:host {
+  margin-left: 12px;
+  margin-right: 12px;
+  a {
+    color: #000;
+    transition: filter 250ms ease;
+
+    text-decoration: none;
+    font-size: 1.2rem;
+
+    &:hover {
+      border-bottom: 2px solid #666;
+      filter: brightness(80%);
+    }
+  }
+}

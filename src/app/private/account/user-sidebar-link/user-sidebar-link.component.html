@@ -1,0 +1,9 @@
+<li (click)="toggleSidebar()" [routerLink]="path">
+  <!-- <a [routerLink]="path"><ng-content></ng-content></a> -->
+  <i>
+    <ng-content></ng-content>
+  </i>
+  <p *ngIf="sidebarService.expanded | async">
+    {{ describe }}
+  </p>
+</li>

@@ -1,0 +1,14 @@
+<aside
+  [ngClass]="{
+    expanded: sidebarService.expanded | async
+  }"
+>
+  <ul>
+    <!-- <li>
+      <button mat-icon-button (click)="sidebarService.toggleExpand()">
+        🍊
+      </button>
+    </li> -->
+    <ng-content></ng-content>
+  </ul>
+</aside>

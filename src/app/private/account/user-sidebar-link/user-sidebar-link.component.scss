@@ -1,0 +1,27 @@
+li {
+  margin: 0;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  font-size: 1.6rem;
+  background-color: rgba(113, 120, 120, 0.06);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  cursor: pointer;
+  position: relative;
+  transition: all 250ms ease-in-out;
+  user-select: none;
+
+  &:hover {
+    filter: brightness(115%);
+  }
+
+  p {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 150%;
+    margin: auto 0;
+  }
+}

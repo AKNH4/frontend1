@@ -1,0 +1,43 @@
+@import "../../../../styles.scss";
+
+aside {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  // box-shadow: 0.5px 0.5px 2px #ddd;
+  box-shadow: 2px 2px 5px 0px #888;
+  height: $height;
+  width: 70px;
+  border-right: #123123;
+  // position: absolute;
+  // left: 0;
+  // z-index: 1111;
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+  }
+}
+
+.expanded {
+  width: 200px;
+  align-items: flex-start;
+  // animation: large 80ms linear forwards;
+}
+
+@keyframes large {
+  0% {
+    width: 70px;
+  }
+  100% {
+    width: 200px;
+  }
+}

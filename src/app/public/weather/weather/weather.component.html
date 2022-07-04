@@ -1,0 +1,7 @@
+<div class="container">
+  <app-weather-widget
+    *ngIf="weather"
+    (onRefresh)="loadData()"
+    [weather]="weather"
+  ></app-weather-widget>
+</div>

@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+}
+
+button {
+  border: none;
+  padding: 12px 1.25rem;
+  color: #000;
+  background-color: #10c9a044;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(85%);
+  }
+}

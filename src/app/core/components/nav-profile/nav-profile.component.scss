@@ -1,0 +1,45 @@
+.profile {
+  width: 150px;
+  position: relative;
+  background-color: #eee;
+  box-shadow: 1px 1px 3px #999;
+  border-radius: 2px;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1.25rem;
+      margin-left: 16px;
+    }
+
+    img {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 6;
+  z-index: 500;
+  height: 100px;
+  width: 150px;
+  background-color: #e0e9e6;
+  display: flex;
+  padding: 12px;
+  padding-top: 0;
+  border-radius: 5px;
+
+  ul {
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+  }
+}

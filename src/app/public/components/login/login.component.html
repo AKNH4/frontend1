@@ -1,0 +1,43 @@
+<div class="container">
+  <form
+    class="form"
+    [formGroup]="loginForm"
+    autocomplete="off"
+    (ngSubmit)="loginFormSubmit()"
+  >
+    <mat-form-field>
+      <input
+        autofocus
+        matInput
+        type="text"
+        matInput
+        placeholder="Benutzername"
+        formControlName="username"
+      />
+      <mat-hint *ngIf="username.errors && username.dirty"
+        >Benutzername braucht man</mat-hint
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="password"
+        placeholder="Passwort"
+        formControlName="password"
+      />
+      <mat-hint *ngIf="password.errors && password.dirty"
+        >Passwort braucht man</mat-hint
+      >
+    </mat-form-field>
+    <button
+      [disabled]="!loginForm.valid || loading"
+      mat-stroked-button
+      color="primary"
+      type="submit"
+    >
+      Login
+    </button>
+    <mat-error *ngIf="errorMsg">{{ errorMsg }}</mat-error>
+    <app-loading-spinner [loading]="loading"></app-loading-spinner>
+  </form>
+</div>

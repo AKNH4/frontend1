@@ -1,0 +1,15 @@
+<div class="profile">
+  <div class="wrapper">
+    <img
+      src="../../../../assets/done_black_24dp.svg"
+      alt="profile"
+      (click)="toggleMenu()"
+    />
+    <a routerLink="/account">Konto</a>
+  </div>
+  <div class="menu" *ngIf="showMenu">
+    <ul>
+      <ng-content></ng-content>
+    </ul>
+  </div>
+</div>

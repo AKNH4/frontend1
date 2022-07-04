@@ -1,0 +1,8 @@
+<div class="widget">
+  <strong>{{ weather.date | date }}</strong>
+  <strong>{{ weather.temperature }} °C</strong>
+  <strong>{{ weather.summary }}</strong>
+  <button mat-stroked-button color="primary" (click)="refresh()">
+    Neu laden
+  </button>
+</div>

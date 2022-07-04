@@ -1,0 +1,24 @@
+<!-- <div class="container">
+  <a routerLink="change-password" mat-flat-button color="secondary">PWD</a>
+  <div class="details" *ngIf="userService.currentUser$ | async as user">
+    <h3>{{ user?.id }}</h3>
+    <h3>{{ user?.username }}</h3>
+  </div>
+</div> -->
+<div class="container">
+  <app-user-sidebar class="sidebar" #sidebar>
+    <app-user-sidebar-link describe="Hallo" [isToggler]="true" path="win.url"
+      >🍰</app-user-sidebar-link
+    >
+    <app-user-sidebar-link
+      describe="PWD anderen"
+      path="/account/change-password"
+      >🍩</app-user-sidebar-link
+    >
+    <app-user-sidebar-link describe="Hallo">🧀</app-user-sidebar-link>
+    <app-user-sidebar-link describe="Hallo">🍕</app-user-sidebar-link>
+    <app-user-sidebar-link describe="Hallo">🍕</app-user-sidebar-link>
+    <app-user-sidebar-link describe="Hallo">🍕</app-user-sidebar-link>
+  </app-user-sidebar>
+  <router-outlet></router-outlet>
+</div>
