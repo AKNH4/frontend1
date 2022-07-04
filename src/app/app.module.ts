@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { NavbarModule } from './navbar/navbar.module';
-import { TodoModule } from './todo/todo.module';
-import { MaterialModule } from './material/material.module';
+import { CoreModule } from './core/core.module';
+import { PublicModule } from './public/public.module';
+import { PrivateModule } from './private/private.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,8 +18,9 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule,
-    NavbarModule,
-    MaterialModule,
+    CoreModule,
+    PublicModule,
+    PrivateModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

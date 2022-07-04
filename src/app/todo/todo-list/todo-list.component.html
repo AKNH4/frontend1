@@ -1,10 +1,14 @@
-<h2>Todos</h2>
-<br />
-<hr />
-<ul>
-  <li *ngFor="let todo of todoService.todos$ | async">
-    <h4>{{ todo.task }}</h4>
-  </li>
-</ul>
-<!-- <button (click)="log()">CLICK</button> -->
+<div class="container">
+  <div class="todos">
+    <ul>
+      <li *ngFor="let todo of todoService.todos$ | async">
+        <h4>{{ todo.task }}</h4>
+        <mat-checkbox [checked]="todo.done" color="primary"
+          >Erledigt</mat-checkbox
+        >
+      </li>
+    </ul>
+  </div>
+</div>
+
 <router-outlet></router-outlet>
